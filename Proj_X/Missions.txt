@@ -1,0 +1,13 @@
+12
+Collect a prime number $$LF(n%i)=0
+Collect a number which divides by &a $ a2,12 $(n%a)=0
+Collect a multiplicity of &a $ a3,20 $LT(a*i)=n
+Collect a square of an integer $$LT(i*i)=n
+Collect the sqaure of &a $ a2,13 $(a*a)=n
+Collect a number N for which N mod 7 = &a $ a3,6 $(n%7)=a
+Collect the missing number: $$E
+Collect the following scalar product: <(&a,&b),(&c,&d)> $ a0,9 b0,9 c0,9 d0,9 $((a*c)+(b*d))=n
+Collect an even number $$(n%2)=0
+Collect an odd number $$(n%2)=1
+Collect a number N for which N^2 mod 6 = &a $a1,5 $((n*n)%6)=a
+Collect a number which divides by both &a and &b $a3,5 b6,8 $((n%a)+(n%b))=0

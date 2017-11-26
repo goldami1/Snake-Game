@@ -1,0 +1,35 @@
+The missions format is defined as follows:
+- the first line consists of the number of missions inside the file
+- Each following line represents a mission
+
+Each mission is defined as follows:
+-Three sections separated by a '$'
+	-Section 1: free text
+	-Section 2: random part
+	-Section 3: formula for solution
+
+Sections formats:
+	1: & signals a variable will follow (a,b,c,d,e are the legit var chars)
+	2: consists of all the variables for the mission, either previously 
+	   defined in the free text section or for internal use.
+	   The format is <var><left limit>,<right_limit>.
+	   for example: the command a3,6 tells the program to randomize a value
+	   between 3 and 6 for the variable a
+	3: May contain either a simple formula or an indication to perform a loop
+	   And check if a certain condition is true in each iteration
+	   the formula must be written with parentheses - each operation must be inside 
+	   a separated pair of parentheses
+	   For example: valid: ((a*b)-(c*d)), (a+b), ((a*b)+c)
+			invalid: (a*b)-(c*d), a+b, (a*b)+c 
+	   'L' => signals the use of a loop is needed
+		  -Must be the first character in section 3 if in use
+	   'T'/'F' => Are indicators for when a loop is used
+		      'T' => if the formula sepcified at the end of the section
+			     is true => return "true"
+		      'F' => if the formula specified is true => return "false"
+
+	special variables also in use: n => represents the collected number
+				       i => represents the loop index if a loop is in use
+
+
+NOTE: THE PROGRAM ASSUMES VALIDITY OF THE MISSIONS FILE SO ANY INCORRECT INPUT MAY CASUE UNDEFINED BEHAVIOR
